@@ -137,7 +137,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">1</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">3</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -192,6 +192,194 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://dengbuqi.github.io/2023/03/23/Combat-Effectiveness-CE-Detection/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Dengbuqi">
+      <meta itemprop="description" content="People change, feelings fade, things go wrong, memories remain but life goes on.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dengbuqi's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/03/23/Combat-Effectiveness-CE-Detection/" class="post-title-link" itemprop="url">Combat Effectiveness(CE) Detection</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2023-03-23 17:24:06 / Modified: 17:27:13" itemprop="dateCreated datePublished" datetime="2023-03-23T17:24:06+09:00">2023-03-23</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>1.1k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Combat-Effectiveness-Detection-using-YOLOv8-and-Tensorflow-js"><a href="#Combat-Effectiveness-Detection-using-YOLOv8-and-Tensorflow-js" class="headerlink" title="Combat Effectiveness Detection using YOLOv8 and Tensorflow.js"></a>Combat Effectiveness Detection using YOLOv8 and Tensorflow.js</h1><p align="center">
+  <img src="/images/ce.jpg" />
+</p>
+
+<p><img src="https://img.shields.io/badge/Made%20with-%F0%9F%96%A4-white" alt="love"><br><img src="https://img.shields.io/badge/tensorflow.js-white?logo=tensorflow" alt="tensorflow.js"></p>
+<hr>
+<p>Combat Effectveness Detection application right in your browser. Serving YOLOv8 in browser using tensorflow.js<br>with <code>webgl</code> backend.</p>
+<h2 id="DEMO"><a href="#DEMO" class="headerlink" title="DEMO"></a>DEMO</h2><p><a href="https://dengbuqi.github.io/Combat-Effectiveness-Detection_yolov8-tfjs/">Check it!</a></p>
+<ul>
+<li><a href="https://dengbuqi.github.io/Combat-Effectiveness-Detection_yolov8-tfjs/">https://dengbuqi.github.io/Combat-Effectiveness-Detection_yolov8-tfjs/</a></li>
+</ul>
+<p><strong>Setup</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/dengbuqi/Combat-Effectiveness-Detection_yolov8-tfjs</span><br><span class="line"><span class="built_in">cd</span> Combat-Effectiveness-Detection_yolov8-tfjs</span><br><span class="line">yarn install <span class="comment">#Install dependencies</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Scripts</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yarn start <span class="comment"># Start dev server</span></span><br><span class="line">yarn build <span class="comment"># Build for productions</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h2><p>YOLOv8n model converted to tensorflow.js.</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">used model : <span class="type">yolov8n</span></span><br><span class="line">size       : 13 <span class="type">Mb</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Use another model</strong></p>
+<p>Use another YOLOv8 model.</p>
+<ol>
+<li><p>Export YOLOv8 model to tfjs format. Read more on the <a target="_blank" rel="noopener" href="https://docs.ultralytics.com/tasks/detection/#export">official documentation</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> ultralytics <span class="keyword">import</span> YOLO</span><br><span class="line"></span><br><span class="line"><span class="comment"># Load a model</span></span><br><span class="line">model = YOLO(<span class="string">&quot;yolov8n.pt&quot;</span>)  <span class="comment"># load an official model</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Export the model</span></span><br><span class="line">model.export(<span class="built_in">format</span>=<span class="string">&quot;tfjs&quot;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Copy <code>yolov8*_web_model</code> to <code>./public</code></p>
+</li>
+<li><p>Update <code>modelName</code> in <code>App.jsx</code> to new model name</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line"><span class="comment">// model configs</span></span><br><span class="line"><span class="keyword">const</span> modelName = <span class="string">&quot;yolov8*&quot;</span>; <span class="comment">// change to new model name</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure></li>
+<li><p>Done! 😊</p>
+</li>
+</ol>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ultralytics/ultralytics">https://github.com/ultralytics/ultralytics</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Hyuto/yolov8-onnxruntime-web">https://github.com/Hyuto/yolov8-onnxruntime-web</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Hyuto/yolov8-tfjs">https://github.com/Hyuto/yolov8-tfjs</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://dengbuqi.github.io/2023/03/23/Heartbeat-Estimation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Dengbuqi">
+      <meta itemprop="description" content="People change, feelings fade, things go wrong, memories remain but life goes on.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dengbuqi's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/03/23/Heartbeat-Estimation/" class="post-title-link" itemprop="url">Heartbeat-Estimation</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2023-03-23 17:03:36 / Modified: 17:23:03" itemprop="dateCreated datePublished" datetime="2023-03-23T17:03:36+09:00">2023-03-23</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>222</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="heartbeat-js-FaceAPI-heart-pulse-rate-monitoring"><a href="#heartbeat-js-FaceAPI-heart-pulse-rate-monitoring" class="headerlink" title="heartbeat-js + FaceAPI heart pulse rate monitoring"></a>heartbeat-js + FaceAPI heart pulse rate monitoring</h1><p>This project combines the <a target="_blank" rel="noopener" href="https://github.com/prouast/heartbeat-js">heartbeat-js</a> and <a target="_blank" rel="noopener" href="https://github.com/justadudewhohacks/face-api.js/">FaceAPI</a><br>By detecting the human face using FaceAPI, we can estimate the heart pulse rate using rPPG method implemented by hearbeat-js project.</p>
+<p align="center">
+  <img src="/images/heartbeat.jpg" />
+</p>
+
+<h1 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h1><p>Check the demo <a href="https://dengbuqi.github.io/heartbeat-js-FaceAPI/">here~</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -344,7 +532,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -385,8 +573,8 @@
 
 <div class="copyright">
   
-  &copy; 
-  <span itemprop="copyrightYear">2021</span>
+  &copy; 2021 – 
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -395,12 +583,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">0k</span>
+    <span title="Symbols count total">2k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1 mins.</span>
+    <span title="Reading time total">2 mins.</span>
 </div>
 
 <!--
@@ -408,7 +596,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">75 words in blog</span>
+  <span class="post-count">277 words in blog</span>
 </div>
         
 <div class="busuanzi-count">

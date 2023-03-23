@@ -18,4 +18,58 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>Heartbeat-Estimation</title>
+    <url>/2023/03/23/Heartbeat-Estimation/</url>
+    <content><![CDATA[<h1 id="heartbeat-js-FaceAPI-heart-pulse-rate-monitoring"><a href="#heartbeat-js-FaceAPI-heart-pulse-rate-monitoring" class="headerlink" title="heartbeat-js + FaceAPI heart pulse rate monitoring"></a>heartbeat-js + FaceAPI heart pulse rate monitoring</h1><p>This project combines the <a href="https://github.com/prouast/heartbeat-js">heartbeat-js</a> and <a href="https://github.com/justadudewhohacks/face-api.js/">FaceAPI</a><br>By detecting the human face using FaceAPI, we can estimate the heart pulse rate using rPPG method implemented by hearbeat-js project.</p>
+<p align="center">
+  <img src="/images/heartbeat.jpg" />
+</p>
+
+<h1 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h1><p>Check the demo <a href="https://dengbuqi.github.io/heartbeat-js-FaceAPI/">here~</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Combat Effectiveness(CE) Detection</title>
+    <url>/2023/03/23/Combat-Effectiveness-CE-Detection/</url>
+    <content><![CDATA[<h1 id="Combat-Effectiveness-Detection-using-YOLOv8-and-Tensorflow-js"><a href="#Combat-Effectiveness-Detection-using-YOLOv8-and-Tensorflow-js" class="headerlink" title="Combat Effectiveness Detection using YOLOv8 and Tensorflow.js"></a>Combat Effectiveness Detection using YOLOv8 and Tensorflow.js</h1><p align="center">
+  <img src="/images/ce.jpg" />
+</p>
+
+<p><img src="https://img.shields.io/badge/Made%20with-%F0%9F%96%A4-white" alt="love"><br><img src="https://img.shields.io/badge/tensorflow.js-white?logo=tensorflow" alt="tensorflow.js"></p>
+<hr>
+<p>Combat Effectveness Detection application right in your browser. Serving YOLOv8 in browser using tensorflow.js<br>with <code>webgl</code> backend.</p>
+<h2 id="DEMO"><a href="#DEMO" class="headerlink" title="DEMO"></a>DEMO</h2><p><a href="https://dengbuqi.github.io/Combat-Effectiveness-Detection_yolov8-tfjs/">Check it!</a></p>
+<ul>
+<li><a href="https://dengbuqi.github.io/Combat-Effectiveness-Detection_yolov8-tfjs/">https://dengbuqi.github.io/Combat-Effectiveness-Detection_yolov8-tfjs/</a></li>
+</ul>
+<p><strong>Setup</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/dengbuqi/Combat-Effectiveness-Detection_yolov8-tfjs</span><br><span class="line"><span class="built_in">cd</span> Combat-Effectiveness-Detection_yolov8-tfjs</span><br><span class="line">yarn install <span class="comment">#Install dependencies</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Scripts</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn start <span class="comment"># Start dev server</span></span><br><span class="line">yarn build <span class="comment"># Build for productions</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h2><p>YOLOv8n model converted to tensorflow.js.</p>
+<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">used model : <span class="type">yolov8n</span></span><br><span class="line">size       : 13 <span class="type">Mb</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Use another model</strong></p>
+<p>Use another YOLOv8 model.</p>
+<ol>
+<li><p>Export YOLOv8 model to tfjs format. Read more on the <a href="https://docs.ultralytics.com/tasks/detection/#export">official documentation</a></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> ultralytics <span class="keyword">import</span> YOLO</span><br><span class="line"></span><br><span class="line"><span class="comment"># Load a model</span></span><br><span class="line">model = YOLO(<span class="string">&quot;yolov8n.pt&quot;</span>)  <span class="comment"># load an official model</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Export the model</span></span><br><span class="line">model.export(<span class="built_in">format</span>=<span class="string">&quot;tfjs&quot;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Copy <code>yolov8*_web_model</code> to <code>./public</code></p>
+</li>
+<li><p>Update <code>modelName</code> in <code>App.jsx</code> to new model name</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">...</span><br><span class="line"><span class="comment">// model configs</span></span><br><span class="line"><span class="keyword">const</span> modelName = <span class="string">&quot;yolov8*&quot;</span>; <span class="comment">// change to new model name</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure></li>
+<li><p>Done! 😊</p>
+</li>
+</ol>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://github.com/ultralytics/ultralytics">https://github.com/ultralytics/ultralytics</a></li>
+<li><a href="https://github.com/Hyuto/yolov8-onnxruntime-web">https://github.com/Hyuto/yolov8-onnxruntime-web</a></li>
+<li><a href="https://github.com/Hyuto/yolov8-tfjs">https://github.com/Hyuto/yolov8-tfjs</a></li>
+</ul>
+]]></content>
+  </entry>
 </search>
