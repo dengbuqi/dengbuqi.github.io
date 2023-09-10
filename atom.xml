@@ -6,7 +6,7 @@
   <link href="https://dengbuqi.github.io/atom.xml" rel="self"/>
   
   <link href="https://dengbuqi.github.io/"/>
-  <updated>2023-03-23T08:27:13.818Z</updated>
+  <updated>2023-09-10T04:59:59.954Z</updated>
   <id>https://dengbuqi.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>label-studio-ml-backend&#39;s segment_anything_model example bug fix: previous annotation disappearing after making new one</title>
+    <link href="https://dengbuqi.github.io/2023/09/10/label-studio-ml-backend-s-segment-anything-model-example-bug-fix-previous-annotation-disappearing-after-making-new-one/"/>
+    <id>https://dengbuqi.github.io/2023/09/10/label-studio-ml-backend-s-segment-anything-model-example-bug-fix-previous-annotation-disappearing-after-making-new-one/</id>
+    <published>2023-09-10T04:46:08.000Z</published>
+    <updated>2023-09-10T04:59:59.954Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>When I try to use <a href="https://github.com/HumanSignal/label-studio-ml-backend/tree/b2c31d34c0414befde3d0d067588617e062ef443/label_studio_ml/examples/segment_anything_model">Interactive Annotation in Label Studio with Segment Anything Model</a> Commits version: b2c31d3. I meet a problem, previous annotation is disappeared after making new annotation.(Latest version is fixed this problem[<a href="https://github.com/HumanSignal/label-studio-ml-backend/blob/master/label_studio_ml/examples/segment_anything_model/model.py">link</a>])</p><h1 id="Fix"><a href="#Fix" class="headerlink" title="Fix"></a>Fix</h1><p>To fix this problem, we need to modify the label-studio-ml-backend/label_studio_ml/examples/segment_anything_model/segment_anything_model.py file.<br>change the method to generate result id.</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;</span>.join(random.SystemRandom().choice(string.ascii_uppercase + string.ascii_lowercase + string.digits))</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>to</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> uuid <span class="keyword">import</span> uuid4</span><br><span class="line"><span class="built_in">str</span>(uuid4())[:<span class="number">4</span>]</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Problem&quot;&gt;&lt;a href=&quot;#Problem&quot; class=&quot;headerlink&quot; title=&quot;Problem&quot;&gt;&lt;/a&gt;Problem&lt;/h1&gt;&lt;p&gt;When I try to use &lt;a href=&quot;https://github.com/Huma</summary>
+      
+    
+    
+    
+    
+    <category term="label-studio, SAM" scheme="https://dengbuqi.github.io/tags/label-studio-SAM/"/>
+    
+  </entry>
   
   <entry>
     <title>Combat Effectiveness(CE) Detection</title>

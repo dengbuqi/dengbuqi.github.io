@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://dengbuqi.github.io/2023/09/10/label-studio-ml-backend-s-segment-anything-model-example-bug-fix-previous-annotation-disappearing-after-making-new-one/</loc>
+    <lastmod>2023-09-10</lastmod>
+  </url>
+  <url>
     <loc>https://dengbuqi.github.io/2023/03/23/Combat-Effectiveness-CE-Detection/</loc>
     <lastmod>2023-03-23</lastmod>
   </url>

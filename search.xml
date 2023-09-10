@@ -72,4 +72,17 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>label-studio-ml-backend&#39;s segment_anything_model example bug fix: previous annotation disappearing after making new one</title>
+    <url>/2023/09/10/label-studio-ml-backend-s-segment-anything-model-example-bug-fix-previous-annotation-disappearing-after-making-new-one/</url>
+    <content><![CDATA[<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>When I try to use <a href="https://github.com/HumanSignal/label-studio-ml-backend/tree/b2c31d34c0414befde3d0d067588617e062ef443/label_studio_ml/examples/segment_anything_model">Interactive Annotation in Label Studio with Segment Anything Model</a> Commits version: b2c31d3. I meet a problem, previous annotation is disappeared after making new annotation.(Latest version is fixed this problem[<a href="https://github.com/HumanSignal/label-studio-ml-backend/blob/master/label_studio_ml/examples/segment_anything_model/model.py">link</a>])</p>
+<h1 id="Fix"><a href="#Fix" class="headerlink" title="Fix"></a>Fix</h1><p>To fix this problem, we need to modify the label-studio-ml-backend/label_studio_ml/examples/segment_anything_model/segment_anything_model.py file.<br>change the method to generate result id.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;</span>.join(random.SystemRandom().choice(string.ascii_uppercase + string.ascii_lowercase + string.digits))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>to</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> uuid <span class="keyword">import</span> uuid4</span><br><span class="line"><span class="built_in">str</span>(uuid4())[:<span class="number">4</span>]</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>label-studio, SAM</tag>
+      </tags>
+  </entry>
 </search>
