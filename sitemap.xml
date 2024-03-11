@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://dengbuqi.github.io/2023/09/10/label-studio-ml-backend-s-segment-anything-model-example-bug-fix-previous-annotation-disappearing-after-making-new-one/</loc>
+    <loc>https://dengbuqi.github.io/about/index.html</loc>
     
-    <lastmod>2023-09-10</lastmod>
+    <lastmod>2024-03-11</lastmod>
     
   </url>
   
   <url>
-    <loc>https://dengbuqi.github.io/about/index.html</loc>
+    <loc>https://dengbuqi.github.io/2023/09/10/label-studio-ml-backend-s-segment-anything-model-example-bug-fix-previous-annotation-disappearing-after-making-new-one/</loc>
     
-    <lastmod>2023-03-23</lastmod>
+    <lastmod>2023-09-10</lastmod>
     
   </url>
   
@@ -67,7 +67,7 @@
 
   <url>
     <loc>https://dengbuqi.github.io/</loc>
-    <lastmod>2023-09-10</lastmod>
+    <lastmod>2024-03-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -75,7 +75,7 @@
   
   <url>
     <loc>https://dengbuqi.github.io/tags/label-studio-SAM/</loc>
-    <lastmod>2023-09-10</lastmod>
+    <lastmod>2024-03-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
