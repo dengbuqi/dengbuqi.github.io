@@ -221,7 +221,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2024-03-12 11:48:02 / Modified: 15:41:11" itemprop="dateCreated datePublished" datetime="2024-03-12T11:48:02+09:00">2024-03-12</time>
+              <time title="Created: 2024-03-12 11:48:02 / Modified: 15:47:46" itemprop="dateCreated datePublished" datetime="2024-03-12T11:48:02+09:00">2024-03-12</time>
             </span>
 
           <br>
@@ -258,7 +258,7 @@
 <p>I believe we have this limitation because we need to <strong>observe</strong> existing things first, then <strong>abstract</strong> and <strong>think</strong> about the features of this thing, in order to <strong>imagine</strong> other things based on some features of this thing.</p>
 <p>因此，如果我们遵从人类的思考方式创建AI模型的话，我假设模型分为3部分： 观察，想象和思考。</p>
 <p>Therefore, if we create AI models following human thinking, I assume the model is divided into three parts: observation, imagination, and thinking.</p>
-<p><img src="/images/aigen.drawio.png" alt="aigen.drawio.png"></p>
+<p><img src="/images/humangen.drawio.png" alt="humangen.drawio.png"></p>
 <p>上图就是我认为的一个人类大脑的思维逻辑，或者说是一种图像生成的AI模型的结构，该结构有点类似于GAN(Generative Adversarial Network)模型。</p>
 <p>The above figure is what I think is the logic of human brain thinking, or the structure of an image generation AI model, which is somewhat similar to the GAN (Generative Adversarial Network) model.</p>
 <p><strong>Observation</strong>: 我们将会观察真实图片，学习并提取真实图片的隐藏特征值(Hidden Feature)。</p>
@@ -282,7 +282,7 @@
 <p>An NLP description problem</p>
 <p>因此，基于这一套思维逻辑，我们或许能够制作一个one-shot或者few-shot的模型，通过反复观测(Observation)和想象(Imagination)同一张图片并对他们进行思考，我们或许能生三个模型：encoder，generator,和thinker三个模型。如下图：</p>
 <p>Therefore, based on this set of thinking logic, we may be able to make a one-shot or few-shot model, through repeated observation (Observation) and imagination (Imagination) of the same picture and thinking about them, we may be able to generate three models: encoder, generator, and thinker. As below:</p>
-<p><img src="/images/aigen.drawio%201.png" alt="aigen.drawio.png"></p>
+<p><img src="/images/aigen.drawio.png" alt="aigen.drawio.png"></p>
 <p>Loss 的设计，当我们设计loss函数的时候，主要是帧对在Thinker模块的输出，Real和Fake和对应的NLP描述均可以设计对应的距离loss函数。</p>
 <p>When designing the Loss function, it is mainly designed for the output of the Thinker module, both Real and Fake and the corresponding NLP description can design the corresponding distance loss function.</p>
 <p>以上便是我对于人类学习和AI学习的一点点思考。</p>
