@@ -43,7 +43,7 @@
 </ul>
 ]]></content>
       <tags>
-        <tag>YOLOv8</tag>
+        <tag>Project</tag>
       </tags>
   </entry>
   <entry>
@@ -57,7 +57,7 @@
 <h1 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h1><p>Check the demo <a href="https://dengbuqi.github.io/heartbeat-js-FaceAPI/">here~</a></p>
 ]]></content>
       <tags>
-        <tag>Heart beat monitor</tag>
+        <tag>Project</tag>
       </tags>
   </entry>
   <entry>
@@ -88,7 +88,7 @@
 <p>to</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> uuid <span class="keyword">import</span> uuid4</span><br><span class="line"><span class="built_in">str</span>(uuid4())[:<span class="number">4</span>]</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <tags>
-        <tag>label-studio, SAM</tag>
+        <tag>Problem</tag>
       </tags>
   </entry>
   <entry>
@@ -195,6 +195,20 @@
 ]]></content>
       <tags>
         <tag>Idle talk</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>My Little Projects</title>
+    <url>/2024/03/17/My-Little-Projects/</url>
+    <content><![CDATA[<p><a href="https://dengbuqi.github.io/life_counter/"><strong>Life Goal Counter</strong></a><br><a href="https://dengbuqi.github.io/life_counter/"><img src="/images/life_counter.png" alt="life_counter"></a></p>
+<p><a href="https://dengbuqi.github.io/bookofanswers/"><strong>Book of Answers</strong></a><br><a href="https://dengbuqi.github.io/bookofanswers/"><img src="/images/bookofanswers.png" alt="bookofanswers"></a></p>
+<p><a href="https://dengbuqi.github.io/cell_yolov8-seg-tfjs/"><strong>Cell Segmentation Application Using YOLOv8</strong></a><br><a href="https://dengbuqi.github.io/cell_yolov8-seg-tfjs/"><img src="/images/cell_yolov8-seg.png" alt="cell_yolov8-seg"></a></p>
+<p><a href="https://dengbuqi.github.io/cell_yolov8-tfjs/"><strong>Cell Detection Application Using YOLOv8</strong></a><br><a href="https://dengbuqi.github.io/cell_yolov8-tfjs/"><img src="/images/cell_yolov8-det.png" alt="cell_yolov8-det"></a></p>
+<p><a href="https://dengbuqi.github.io/Combat-Effectiveness-Detection_yolov8-tfjs/"><strong>Combat Effectiveness Detection using YOLOv8 and Tensorflow.js</strong></a><br><a href="https://dengbuqi.github.io/Combat-Effectiveness-Detection_yolov8-tfjs/"><img src="/images/ce.jpg" alt="CE_Det"></a></p>
+<p><a href="https://dengbuqi.github.io/heartbeat-js-FaceAPI/"><strong>Heartbeat-Estimation</strong></a><br><a href="https://dengbuqi.github.io/heartbeat-js-FaceAPI/"><img src="/images/heartbeat.jpg" alt="HB_Det"></a></p>
+]]></content>
+      <tags>
+        <tag>Project</tag>
       </tags>
   </entry>
 </search>
