@@ -141,7 +141,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">11</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">12</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -196,6 +196,108 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://dengbuqi.github.io/2024/10/02/ComfyUI-based-Decentralized-Content-Generation-Platform/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Dengbuqi">
+      <meta itemprop="description" content="我是个兴趣使然的AI Researcher. <br> I am a researcher interest in AI.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dengbuqi's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/10/02/ComfyUI-based-Decentralized-Content-Generation-Platform/" class="post-title-link" itemprop="url">ComfyUI-based Decentralized Content Generation Platform</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2024-10-02 22:20:46 / Modified: 22:26:30" itemprop="dateCreated datePublished" datetime="2024-10-02T22:20:46+09:00">2024-10-02</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>4.8k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>4 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <!-- # 基于ComfyUI的去中性化的内容生成平台 ComfyUI-based Decentralized Content Generation Platform -->
+
+<h1 id="1-ComfyUI"><a href="#1-ComfyUI" class="headerlink" title="1. ComfyUI"></a>1. ComfyUI</h1><p><a target="_blank" rel="noopener" href="https://github.com/comfyanonymous/ComfyUI">https://github.com/comfyanonymous/ComfyUI</a></p>
+<p>在介绍我们去中心化的内容生成平台之前，我们先介绍一下ComfyUI是什么，以及他的理念。</p>
+<p>ComfyUI—<strong>The most powerful and modular diffusion model GUI and backend.</strong> </p>
+<p>Before introducing our decentralized content generation platform, let’s explain what ComfyUI is and its concept firstly.</p>
+<p>ComfyUI—<strong>The most powerful and modular diffusion model GUI and backend.</strong></p>
+<p><img src="images/dcomfyui/image.png" alt="image.png"></p>
+<p>从它的介绍可知，它是一个让你在stable diffusion等大量生成模型之间设计一条满足自己工作流程需要的框架。每一个模型或者数据操作被设计成了一个个node被允许添加到你们的工作流中。在这里你可以结合各种模型之间的优势，在本地构建自己特色的内容生成工作流。包括但不止text2img, img2img, impating, lora 等工作流。</p>
+<p>From its description, we can see that it is a framework that allows you to design a workflow that meets your needs among a large number of generative models such as stable diffusion. Each model or data operation is designed as a node that can be added to your workflow. Here you can combine the advantages of various models to build your own unique content generation workflow locally. This includes but is not limited to, text2img, img2img, inpainting, lora, and other workflows.</p>
+<h1 id="2-ComfyUI痛点-ComfyUI-Pain-Points"><a href="#2-ComfyUI痛点-ComfyUI-Pain-Points" class="headerlink" title="2. ComfyUI痛点 ComfyUI Pain Points"></a>2. ComfyUI痛点 ComfyUI Pain Points</h1><p>但是，ComfyUi也存在一个巨大的痛点，那就是如果你的工作流中运行了大量的模型，那么你将需要一台超高性能的电脑来同时运行这些模型。现实是我们个人可能运行工作流中的一个或一些模型。</p>
+<p>However, ComfyUI also has a significant pain point. If your workflow runs a large number of models, you will need a high-performance computer to run these models on one local computer. The reality is that we as individuals may only be able to run one or a few models in the workflow in our PC.</p>
+<p><img src="images/dcomfyui/image%201.png" alt="image.png"></p>
+<h1 id="3-去中性化的ComfyUI-Decentralized-ComfyUI"><a href="#3-去中性化的ComfyUI-Decentralized-ComfyUI" class="headerlink" title="3. 去中性化的ComfyUI Decentralized ComfyUI"></a>3. 去中性化的ComfyUI Decentralized ComfyUI</h1><p>得益于ComfyUI的设计，我们其实可以把工作流中的每一个node看作一个独立的个体使用。那么我们为什么要在不同的电脑中创建同样的node呢？这完全是一中算力的浪费。试想，我的电脑只够我运行A模型node，而Smith的电脑够运行B模型node，Jone则是C模型node。如果我的工作流程需要A，B，C这四个node,那是不是我可以借用Smith和Jone的算力便可运行？同样的Smith和Jone也可以使用我的node运行他们想要的工作流。唯一需要的就是我们node作为API服务暴露给各位。</p>
+<p>Thanks to ComfyUI’s design, we can actually treat each node in the workflow as an independent entity. So why should we create the same nodes on different computers? This is a complete waste of computing power. Imagine if my computer is only capable of running model node A, while Smith’s computer can run model node B, and Jones can run model node C. If my workflow requires nodes A, B, and C, could I borrow the computing power from Smith and Jones to run it? Correspondingly, Smith and Jones could also use my node to run the workflows they want. The only thing needed for us is to expose our nodes as API services to everyone.</p>
+<p><img src="images/dcomfyui/DComfyU.drawio.png" alt="DComfyU.drawio.png"></p>
+<h1 id="4-如何构建去中性化的ComfyUI-How-to-Build-a-Decentralized-ComfyUI"><a href="#4-如何构建去中性化的ComfyUI-How-to-Build-a-Decentralized-ComfyUI" class="headerlink" title="4. 如何构建去中性化的ComfyUI How to Build a Decentralized ComfyUI"></a>4. 如何构建去中性化的ComfyUI How to Build a Decentralized ComfyUI</h1><p>在我的计划中，我们应该是高度依赖ComfyUI或者它的node思想来构建我们的去中性化平台。主要的设计有下面几点:</p>
+<p>In my plan, we should heavily rely on ComfyUI or its node concept to build our decentralized platform. The main designs include the following points:</p>
+<h2 id="1-ComfyUI-API-service-node-服务节点-ComfyUI-API-Service-Node"><a href="#1-ComfyUI-API-service-node-服务节点-ComfyUI-API-Service-Node" class="headerlink" title="1. ComfyUI API service node 服务节点 ComfyUI API Service Node"></a>1. ComfyUI API service node 服务节点 ComfyUI API Service Node</h2><p>我们可以基于ComfyUI的特性，直接构建API service node 节点，尝试将其他模型的节点node自动打包成一个个的API service暴露给其他使用者。</p>
+<p>Based on ComfyUI’s features, we can directly build API service nodes, attempting to automatically package the other model’s nodes into individual API services exposed to other users.</p>
+<h2 id="2-Node-management-center-节点管理中心-Node-Management-Center"><a href="#2-Node-management-center-节点管理中心-Node-Management-Center" class="headerlink" title="2. Node management center 节点管理中心 Node Management Center"></a>2. Node management center 节点管理中心 Node Management Center</h2><p>虽然我们可以自己构建很多ComfyUI API service node节点，但是大部分人是不具备公有IP将自己的服务暴露在。我们应该构建一个节点管理中心，管理服务节点的同时，转发各个私有IP服务节点，暴露给其他用户。而使用者也可以通过管理中心使用自己想要的节点服务。</p>
+<p>Although we can build many ComfyUI API service nodes ourselves, most people do not have a public IP to expose their services. We should build a node management center that manages service nodes while forwarding various private IP service nodes, exposing them to other users. Users can also use the node services they want through the management center.</p>
+<h2 id="3-Security-use-tokens-data-transmission-crypto-anonymous-and-so-on-安全-tokens-数据传输加密，匿名化等等-Security-use-tokens-data-transmission-crypto-anonymous-and-so-on"><a href="#3-Security-use-tokens-data-transmission-crypto-anonymous-and-so-on-安全-tokens-数据传输加密，匿名化等等-Security-use-tokens-data-transmission-crypto-anonymous-and-so-on" class="headerlink" title="3. Security (use tokens, data transmission crypto, anonymous, and so on) 安全(tokens, 数据传输加密，匿名化等等) Security (use tokens, data transmission crypto, anonymous, and so on)"></a>3. Security (use tokens, data transmission crypto, anonymous, and so on) 安全(tokens, 数据传输加密，匿名化等等) Security (use tokens, data transmission crypto, anonymous, and so on)</h2><p>节点管理中心构建成功的化，接下来我们就需要在服务节点，管理中心，使用者之间构建安全可靠的通信服务。token认证，传输数据加，匿名化等都需要我们提供支持。</p>
+<p>If the node management center is successfully built, we then need to build secure and reliable communication services between service nodes, management centers, and users. We need to provide support for token authentication, data transmission encryption, anonymization, and more.</p>
+<h2 id="4-Payment-Strategy-cyber-currency-Onlie-payment-Credit-cart-支付策略-加密货币，-在线支付，-信用卡-Payment-Strategy-cryptocurrency-Online-payment-Credit-card"><a href="#4-Payment-Strategy-cyber-currency-Onlie-payment-Credit-cart-支付策略-加密货币，-在线支付，-信用卡-Payment-Strategy-cryptocurrency-Online-payment-Credit-card" class="headerlink" title="4. Payment Strategy(cyber currency? Onlie payment? Credit cart?) 支付策略(加密货币， 在线支付， 信用卡) Payment Strategy (cryptocurrency? Online payment? Credit card?)"></a>4. Payment Strategy(cyber currency? Onlie payment? Credit cart?) 支付策略(加密货币， 在线支付， 信用卡) Payment Strategy (cryptocurrency? Online payment? Credit card?)</h2><p>为了更大化的推广我们的去中心化节点，利益当然是最大的推手。我们需要节点的使用者支付一定的费用给节点的提供者，同时节点管理中心也需要一定的资金支持服务器和电信服务的费用。这样子才可以促进整个社区的正向发展。</p>
+<p>To maximize the promotion of our decentralized nodes, profit is certainly the biggest driver. We need node users to pay a certain fee to node providers, and the node management center also needs some funds to support server and telecommunication service costs. By this way, we can promote the positive development of the entire community.</p>
+<h2 id="5-Everyone-can-make-money-and-everyone-can-use-large-computing-power-services-每个人都可以通过它挣钱，每个人都可以使用大计算量的服务"><a href="#5-Everyone-can-make-money-and-everyone-can-use-large-computing-power-services-每个人都可以通过它挣钱，每个人都可以使用大计算量的服务" class="headerlink" title="5. Everyone can make money, and everyone can use large computing power services 每个人都可以通过它挣钱，每个人都可以使用大计算量的服务"></a>5. Everyone can make money, and everyone can use large computing power services 每个人都可以通过它挣钱，每个人都可以使用大计算量的服务</h2><p>至此，每一个人都可以使用自己的电脑搭建一个节点来获得收益，而大家也可以任意的使用最大量的算力生成自己想要的内容。</p>
+<p>Therefore, everyone can use their computer to set up a node to earn income, and everyone can use the maximum amount of computing power to generate the content they want.</p>
+<h1 id="5-另外-Moreover"><a href="#5-另外-Moreover" class="headerlink" title="5. 另外 Moreover"></a>5. 另外 Moreover</h1><p>另外， 虽然我们的平台是基于ComfyUI的概念，但是，我认为通过合理的设计，我们不但可以把这个平台使用到内容生成工作流中，我们可以应用到任何的AI模型工作流算力共享中。我们力求构建一个全球AI算力共享平台。或许以后还可以使用这个平台进行模型的训练和数据的收集等AI模型的前置 。</p>
+<p>In addition, although our platform is based on the concept of ComfyUI, I believe that through reasonable design, we can not only use this platform in content generation workflows, but we can also apply it to any AI model workflow computing power sharing. We strive to build a global AI computing power sharing platform. Perhaps in the future, we can also use this platform for model training and data collection, and other AI model prerequisites.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -1244,90 +1346,6 @@ b_B = 0; \\</annotation></semantics></math></span><span class="katex-html" aria-
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://dengbuqi.github.io/2023/03/23/Heartbeat-Estimation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Dengbuqi">
-      <meta itemprop="description" content="我是个兴趣使然的AI Researcher. <br> I am a researcher interest in AI.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dengbuqi's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/03/23/Heartbeat-Estimation/" class="post-title-link" itemprop="url">Heartbeat-Estimation</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2023-03-23 17:03:36" itemprop="dateCreated datePublished" datetime="2023-03-23T17:03:36+09:00">2023-03-23</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-03-17 14:21:27" itemprop="dateModified" datetime="2024-03-17T14:21:27+09:00">2024-03-17</time>
-              </span>
-
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>222</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="heartbeat-js-FaceAPI-heart-pulse-rate-monitoring"><a href="#heartbeat-js-FaceAPI-heart-pulse-rate-monitoring" class="headerlink" title="heartbeat-js + FaceAPI heart pulse rate monitoring"></a>heartbeat-js + FaceAPI heart pulse rate monitoring</h1><p>This project combines the <a target="_blank" rel="noopener" href="https://github.com/prouast/heartbeat-js">heartbeat-js</a> and <a target="_blank" rel="noopener" href="https://github.com/justadudewhohacks/face-api.js/">FaceAPI</a><br>By detecting the human face using FaceAPI, we can estimate the heart pulse rate using rPPG method implemented by hearbeat-js project.</p>
-<p align="center">
-  <img src="/images/heartbeat.jpg" />
-</p>
-
-<h1 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h1><p>Check the demo <a href="https://dengbuqi.github.io/heartbeat-js-FaceAPI/">here~</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1399,7 +1417,7 @@ b_B = 0; \\</annotation></semantics></math></span><span class="katex-html" aria-
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1456,12 +1474,12 @@ b_B = 0; \\</annotation></semantics></math></span><span class="katex-html" aria-
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">24k</span>
+    <span title="Symbols count total">28k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">21 mins.</span>
+    <span title="Reading time total">26 mins.</span>
 </div>
 
 <!--
@@ -1469,7 +1487,7 @@ b_B = 0; \\</annotation></semantics></math></span><span class="katex-html" aria-
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">6.8k words in blog</span>
+  <span class="post-count">8.5k words in blog</span>
 </div>
         
 <div class="busuanzi-count">

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://dengbuqi.github.io/2024/10/02/ComfyUI-based-Decentralized-Content-Generation-Platform/</loc>
+    
+    <lastmod>2024-10-02</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://dengbuqi.github.io/2024/08/16/Dynamic-Neural-Architecture-DNA/</loc>
     
     <lastmod>2024-08-16</lastmod>
@@ -116,7 +123,7 @@
 
   <url>
     <loc>https://dengbuqi.github.io/</loc>
-    <lastmod>2024-08-16</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -124,28 +131,28 @@
   
   <url>
     <loc>https://dengbuqi.github.io/tags/Brainstorm/</loc>
-    <lastmod>2024-08-16</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dengbuqi.github.io/tags/Idle-talk/</loc>
-    <lastmod>2024-08-16</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dengbuqi.github.io/tags/Project/</loc>
-    <lastmod>2024-08-16</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://dengbuqi.github.io/tags/Problem/</loc>
-    <lastmod>2024-08-16</lastmod>
+    <lastmod>2024-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
